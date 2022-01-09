@@ -2,7 +2,7 @@ h2 {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 600;
-  margin: 0;
+  margin-top: 15px;
   padding: 0;
 }
 
@@ -21,7 +21,7 @@ p {
 }
 
 .card-container {
-  max-width: 350px;
+  max-width: 20%;
   background-color: var(--cardBG);
   padding: 20px;
   border-radius: 10px;
@@ -42,11 +42,24 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1rem;
 }
 
 .card-footer {
-  border-top: 2px solid var(--line);
-  padding-top: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  border-top: 3px solid var(--line);
+  padding-top: 8px;
+}
+
+.card-footer img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border: 2px solid var(--white);
+  border-radius: 50%;
 }
 
 .attribution {
@@ -55,4 +68,12 @@ p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+.strong-text {
+  display: flex;
+  gap: 8px;
+}
+
+.cyan {
+  color: var(--cyan);
 }
