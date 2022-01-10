@@ -1,38 +1,106 @@
 import React from "react";
 
+import styled from "styled-components";
+
 import Clock from "../icons/clock";
 import Ethereum from "../icons/ethereum";
-import StrongText from "../strongText";
+
+import { StrongTextWrapper } from "../StrongTextWrapper";
 
 export default function Card() {
   return (
-    <div className="card-container">
-      <div className="card-image">
+    <Wrapper className="card-container">
+      <ImgWrapper>
         <div className="active-state">
           <img src="icon-view.svg" alt="" />
         </div>
         <img src="image-equilibrium.jpg" alt="equilibrium" />
-      </div>
-      <div className="card-content">
-        <h2>Equilibrium #3429</h2>
-        <p>Our Equilibrium collection promotes balance and calm.</p>
+      </ImgWrapper>
+      <Content>
+        <Title>Equilibrium #3429</Title>
+        <Paragraph>
+          Our Equilibrium collection promotes balance and calm.
+        </Paragraph>
         <div>
-          <div className="strong-text cyan">
+          <StrongTextWrapper variant="isCyan">
             <Ethereum fill="currentColor" />
-            <StrongText>0.041 ETH</StrongText>
-          </div>
+            0.041 ETH
+          </StrongTextWrapper>
 
-          <div className="strong-text">
-            <Clock fill="currentColor" />
-            <StrongText>3 days left</StrongText>
-          </div>
+          <StrongTextWrapper>
+            <Clock fill="currentColor" />3 days left
+          </StrongTextWrapper>
         </div>
-      </div>
+      </Content>
 
-      <div className="card-footer">
+      <CardFooter>
         <img src="./image-avatar.png" alt="" />
         <p>Creation of Jules Wyvern</p>
-      </div>
-    </div>
+      </CardFooter>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  width: 80%;
+  background-color: ${(props) => props.theme.cardBG};
+  padding: 20px;
+  border-radius: 10px;
+
+  & img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  @media (min-width: 375px) {
+    width: 350px;
+  }
+`;
+
+const ImgWrapper = styled.div`
+  position: relative;
+`;
+
+const Content = styled.div`
+  padding-bottom: 20px;
+
+  & div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+  }
+`;
+
+const Title = styled.h2`
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 15px;
+  padding: 0;
+`;
+
+const Paragraph = styled.p`
+  font-weight: 400;
+  margin: 20;
+  padding: 0;
+  color: ${(props) => props.theme.white};
+`;
+
+const CardFooter = styled.div`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  border-top: 3px solid ${(props) => props.theme.line};
+  padding-top: 8px;
+
+  & img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border: 2px solid ${(props) => props.theme.white};
+    border-radius: 50%;
+  }
+`;
