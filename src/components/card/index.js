@@ -46,7 +46,7 @@ const Wrapper = styled.div`
   background-color: ${(props) => props.theme.cardBG};
   padding: 20px;
   border-radius: 10px;
-  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
 
   & img {
     width: 100%;
