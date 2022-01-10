@@ -21,7 +21,7 @@ p {
 }
 
 .card-container {
-  max-width: 80%;
+  width: 80%;
   background-color: var(--cardBG);
   padding: 20px;
   border-radius: 10px;
@@ -29,6 +29,34 @@ p {
 
 .card-container img {
   width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-image {
+  position: relative;
+}
+
+.active-state {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  place-items: center;
+  background-color: var(--cyanVariant);
+  border-radius: 8px;
+}
+
+.active-state:hover {
+  cursor: pointer;
+
+  display: grid;
+}
+
+.active-state img {
+  width: 50px;
   height: auto;
   object-fit: cover;
   border-radius: 8px;

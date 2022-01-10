@@ -9,6 +9,8 @@
   --line: hsl(215, 32%, 27%);
   /* Typography */
   --paragraph: 18px;
+  /* variant*/
+  --cyanVariant: hsla(178, 100%, 50%, 0.5);
 }
 
 body {

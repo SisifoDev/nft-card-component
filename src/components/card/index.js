@@ -8,6 +8,9 @@ export default function Card() {
   return (
     <div className="card-container">
       <div className="card-image">
+        <div className="active-state">
+          <img src="icon-view.svg" alt="" />
+        </div>
         <img src="image-equilibrium.jpg" alt="equilibrium" />
       </div>
       <div className="card-content">
