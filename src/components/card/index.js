@@ -22,7 +22,7 @@ export default function Card() {
           Our Equilibrium collection promotes balance and calm.
         </Paragraph>
         <div>
-          <StrongTextWrapper variant="isCyan">
+          <StrongTextWrapper isCyan>
             <Ethereum fill="currentColor" />
             0.041 ETH
           </StrongTextWrapper>
@@ -46,6 +46,7 @@ const Wrapper = styled.div`
   background-color: ${(props) => props.theme.cardBG};
   padding: 20px;
   border-radius: 10px;
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
 
   & img {
     width: 100%;
@@ -53,6 +54,7 @@ const Wrapper = styled.div`
     object-fit: cover;
     border-radius: 8px;
   }
+
   @media (min-width: 375px) {
     width: 350px;
   }
@@ -60,6 +62,32 @@ const Wrapper = styled.div`
 
 const ImgWrapper = styled.div`
   position: relative;
+
+  .active-state {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    place-items: center;
+    background-color: ${(props) => props.theme.cyanVariant};
+    border-radius: 8px;
+  }
+
+  .active-state img {
+    width: 50px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    & .active-state {
+      display: grid;
+    }
+  }
 `;
 
 const Content = styled.div`
