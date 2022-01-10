@@ -21,7 +21,7 @@ p {
 }
 
 .card-container {
-  max-width: 20%;
+  max-width: 80%;
   background-color: var(--cardBG);
   padding: 20px;
   border-radius: 10px;
@@ -76,4 +76,11 @@ p {
 
 .cyan {
   color: var(--cyan);
+}
+/* Desktop */
+
+@media (min-width: 375px) {
+  .card-container {
+    width: 350px;
+  }
 }
