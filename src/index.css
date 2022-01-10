@@ -1,27 +1,37 @@
-:root {
-  --white: #90aed9;
-  /* Primary */
-  --softBlue: hsl(215, 51%, 70%);
-  --cyan: hsl(178, 100%, 50%);
-  /* Neutral */
-  --mainBG: hsl(217, 54%, 11%);
-  --cardBG: hsl(216, 50%, 16%);
-  --line: hsl(215, 32%, 27%);
-  /* Typography */
-  --paragraph: 18px;
-}
-
 body {
   margin: 0;
   font-family: "Outfit", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: var(--paragraph);
-  color: var(--white);
-  background-color: var(--mainBG);
+  font-size: 18px;
+  color: #90aed9;
+  background-color: hsl(217, 54%, 11%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.active-state {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  place-items: center;
+  background-color: var(--cyanVariant);
+  border-radius: 8px;
+}
+
+.active-state:hover {
+  cursor: pointer;
+  display: grid;
+}
+
+.active-state img {
+  width: 50px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
 }
