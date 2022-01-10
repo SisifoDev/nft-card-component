@@ -101,7 +101,7 @@ const Content = styled.div`
   }
 `;
 
-const Title = styled.h2`
+const Title = styled.h1`
   color: #fff;
   font-size: 1.5rem;
   font-weight: 600;
